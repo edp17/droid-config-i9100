@@ -3,3 +3,4 @@
 /etc/ohm/dbus_signal_conf.ini
 /etc/ohm/modules.ini
 /etc/dbus-1/system.d/ohm-policy.conf
+/etc/ohm/plugins.d/accessories.ini
