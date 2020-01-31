@@ -52,6 +52,7 @@
 /lib/systemd/system/droid-late-start.service
 /usr/share/csd/settings.d/hw-settings.ini
 /usr/share/ssu/features.d/glibc.ini
+/usr/bin/dhdstart.sh
 /usr/local/share/info/find.info-2
 /usr/local/share/info/find-maint.info
 /usr/local/share/info/find.info-1
@@ -68,9 +69,10 @@
 /usr/local/bin/locate
 /usr/local/bin/xargs
 /usr/local/bin/updatedb
-/etc/mce/60-doubletap-jolla.ini
+/etc/ofono/ril_subscription.conf
 /etc/sysconfig/connman
-/etc/modules-load.d/dhd.conf
 /var/lib/environment/compositor/droid-hal-device.conf
 /lib/systemd/system/local-fs.target.wants/android.mount
+/lib/systemd/system/multi-user.target.wants/dhd.service
 /lib/systemd/system/android.mount
+/lib/systemd/system/dhd.service

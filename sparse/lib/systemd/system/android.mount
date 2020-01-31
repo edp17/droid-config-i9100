@@ -6,7 +6,7 @@ Before=local-fs.target systemd-modules-load.service
 What=/dev/mmcblk0p11
 Where=/android
 Type=vfat
-Options=rw,relatime,data=ordered
+Options=rw
 
 TimeoutSec=5
 

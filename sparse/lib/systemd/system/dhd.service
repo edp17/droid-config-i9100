@@ -1,0 +1,8 @@
+[Unit]
+Description=Start wifi module dhd.ko
+After=local-fs.target
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+ExecStart=/usr/bin/dhdstart.sh
