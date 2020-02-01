@@ -37,5 +37,12 @@ Requires:
 # to improve camera startup times and the like
 #- mapplauncherd-booster-silica-qt5-media
 
+# install flashlight
+- jolla-settings-system-flashlight
+
+# install some packages
+- mce-tools
+- connman-tools
+
 Summary: Jolla Configuration i9100
 
