@@ -12,7 +12,7 @@ Requires:
 - droid-config-i9100-policy-settings
 - droid-config-i9100-preinit-plugin
 - droid-config-i9100-flashing
-- droid-config-i9100-bluez5
+- droid-config-i9100-bluez4
 - droid-hal-version-i9100
 
 # Hybris packages
