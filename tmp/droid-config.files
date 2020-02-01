@@ -70,6 +70,7 @@
 /usr/local/bin/xargs
 /usr/local/bin/updatedb
 /etc/ofono/ril_subscription.conf
+/etc/firmware/bcm4330B1.hcd
 /etc/sysconfig/connman
 /var/lib/environment/compositor/droid-hal-device.conf
 /lib/systemd/system/local-fs.target.wants/android.mount
