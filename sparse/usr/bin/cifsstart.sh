@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 
-/usr/bin/sudo /system/bin/insmod /lib/modules/cifs.ko
+/system/bin/insmod /lib/modules/`uname -r`/cifs.ko
