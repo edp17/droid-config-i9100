@@ -28,3 +28,4 @@
 /var/lib/nemo-pulseaudio-parameters/modes/ihfandbtmono/mainvolume
 /var/lib/nemo-pulseaudio-parameters/modes/hp/mainvolume
 /var/lib/nemo-pulseaudio-parameters/modes/ihfandlineout/mainvolume
+/etc/pulse/arm_droid_card_custom.pa
