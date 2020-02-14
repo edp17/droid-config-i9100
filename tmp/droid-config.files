@@ -52,6 +52,7 @@
 /lib/systemd/system/droid-late-start.service
 /usr/share/csd/settings.d/hw-settings.ini
 /usr/share/ssu/features.d/glibc.ini
+/usr/bin/cifsstart.sh
 /usr/bin/dhdstart.sh
 /usr/local/share/info/find.info-2
 /usr/local/share/info/find-maint.info
@@ -70,10 +71,16 @@
 /usr/local/bin/xargs
 /usr/local/bin/updatedb
 /etc/ofono/ril_subscription.conf
+/etc/systemd/user/booster-silica-qt5.service
+/etc/firmware/bcm4330B1.conf
 /etc/firmware/bcm4330B1.hcd
 /etc/sysconfig/connman
+/etc/sysconfig/bluetooth-rfkill-event-hciattach
 /var/lib/environment/compositor/droid-hal-device.conf
+/var/lib/environment/ofono/noplugin.conf
 /lib/systemd/system/local-fs.target.wants/android.mount
+/lib/systemd/system/multi-user.target.wants/cifs.service
 /lib/systemd/system/multi-user.target.wants/dhd.service
+/lib/systemd/system/cifs.service
 /lib/systemd/system/android.mount
 /lib/systemd/system/dhd.service
