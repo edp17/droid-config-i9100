@@ -75,5 +75,10 @@ Requires:
 #- nfcd-binder-plugin
 #- jolla-settings-system-nfc
 
+# install stuff for bluetooth
+- broadcom-bluetooth
+- bluetooth-rfkill-event
+- bluetooth-rfkill-event-configs-mer
+
 Summary: Jolla HW Adaptation i9100
 
