@@ -1,1 +1,1 @@
-CONFIGFILE="-c /etc/firmware/bcm4330B1.conf"
+CONFIGFILE="-c /etc/firmware/bcm4330b1.conf"
