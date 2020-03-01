@@ -1,8 +1,0 @@
-[Unit]
-Description=Start cifs module cifs.ko
-After=local-fs.target
-
-[Service]
-Type=oneshot
-RemainAfterExit=yes
-ExecStart=/usr/bin/cifsstart.sh
