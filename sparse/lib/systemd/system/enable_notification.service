@@ -1,0 +1,11 @@
+[Unit]
+Description=Enable notifications (set 1 into /sys/class/misc/notification/notification_enabled)
+After=mce.service
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/droid/enable_notifications.sh
+Restart=on-error
+
+[Install]
+WantedBy=multi-user.target

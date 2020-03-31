@@ -1,9 +1,0 @@
-[Unit]
-Description=Run hciattach when HCI UART device becomes available
-ConditionPathExists=/efs/bluetooth/bt_addr
-ConditionPathExists=/system/bin
-
-[Service]
-Type=forking
-ExecStartPre=/usr/sbin/rfkill unblock bluetooth
-ExecStart=/usr/sbin/hciattach -f /system/bin ttySAC0 bcm43xx 3000000 flow sleep /efs/bluetooth/bt_addr
