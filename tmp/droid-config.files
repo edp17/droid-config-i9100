@@ -873,6 +873,7 @@
 /usr/lib/mozembedlite/chrome/embedlite/content/ecosia.xml
 /usr/lib/mozembedlite/chrome/embedlite/content/ixquick.xml
 /usr/lib/mozembedlite/chrome/embedlite/content/swisscows.xml
+/usr/bin/droid/enable_notifications.sh
 /usr/bin/hotspot.sh
 /usr/bin/kimmoli-diyicons.sh
 /usr/local/share/info/find.info-2
@@ -891,12 +892,12 @@
 /usr/local/bin/locate
 /usr/local/bin/xargs
 /usr/local/bin/updatedb
-/etc/mce/60-white.ini
+/etc/mce/60-binary.ini
+/etc/mce/60-battery-udev-devices.ini
 /etc/modprobe.d/dhd.conf
 /etc/ofono/ril_subscription.conf
 /etc/systemd/user/booster-silica-qt5.service
 /etc/firmware/bcm4330b1.conf
-/etc/firmware/bcm43xx.hcd
 /etc/sysconfig/connman
 /etc/sysconfig/bluetooth-rfkill-event-hciattach
 /etc/modules-load.d/cifs.conf
@@ -906,7 +907,8 @@
 /edp17packages/bluetooth/bluetooth-rfkill-event-configs-mer-1.0.8-1.armv7hl.rpm
 /var/lib/environment/compositor/droid-hal-device.conf
 /var/lib/environment/ofono/noplugin.conf
-/lib/systemd/system/dev-ttySAC0.device
+/lib/systemd/system/enable_notification.service
 /lib/systemd/system/local-fs.target.wants/android.mount
-/lib/systemd/system/hciattach.service
+/lib/systemd/system/multi-user.target.wants/enable_notification.service
 /lib/systemd/system/android.mount
+/edp17/max_brightness
