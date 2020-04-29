@@ -898,6 +898,7 @@
 /etc/ofono/ril_subscription.conf
 /etc/systemd/user/booster-silica-qt5.service
 /etc/firmware/bcm4330b1.conf
+/etc/firmware/btmac
 /etc/sysconfig/connman
 /etc/sysconfig/bluetooth-rfkill-event-hciattach
 /etc/modules-load.d/cifs.conf
@@ -907,6 +908,7 @@
 /edp17packages/bluetooth/bluetooth-rfkill-event-configs-mer-1.0.8-1.armv7hl.rpm
 /var/lib/environment/compositor/droid-hal-device.conf
 /var/lib/environment/ofono/noplugin.conf
+/lib/udev/rules.d/100-bluetooth-brcm.rules
 /lib/systemd/system/enable_notification.service
 /lib/systemd/system/local-fs.target.wants/android.mount
 /lib/systemd/system/multi-user.target.wants/enable_notification.service

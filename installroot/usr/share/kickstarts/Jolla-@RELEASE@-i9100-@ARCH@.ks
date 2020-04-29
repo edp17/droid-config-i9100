@@ -7,8 +7,8 @@
 # SuggestedArchitecture: armv7hl
 
 keyboard us
-lang en_US.UTF-8
 user --name nemo --groups audio,input,video --password nemo
+lang en_US.UTF-8
 timezone --utc UTC
 
 ### Commands from /tmp/sandbox/usr/share/ssu/kickstart/part/default
