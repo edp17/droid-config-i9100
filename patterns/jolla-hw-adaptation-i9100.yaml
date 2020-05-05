@@ -1,0 +1,78 @@
+# Feel free to disable non-critical HA parts during devel by commenting lines out
+# Generated in hadk by executing: rpm/dhd/helpers/add_new_device.sh
+
+Description: Pattern with packages for i9100 HW Adaptation
+Name: jolla-hw-adaptation-i9100
+Requires:
+- droid-hal-i9100
+- droid-hal-i9100-img-boot
+- droid-hal-i9100-kernel-modules
+- droid-config-i9100-sailfish
+- droid-config-i9100-pulseaudio-settings
+- droid-config-i9100-policy-settings
+- droid-config-i9100-preinit-plugin
+- droid-config-i9100-flashing
+- droid-config-i9100-bluez5
+- droid-hal-version-i9100
+
+# Hybris packages
+- libhybris-libEGL
+- libhybris-libGLESv2
+- libhybris-libwayland-egl
+
+# Sensors
+- hybris-libsensorfw-qt5
+
+# Vibra
+- ngfd-plugin-native-vibrator
+- qt5-feedback-haptics-native-vibrator
+
+# Needed for /dev/touchscreen symlink
+- qt5-plugin-generic-evdev
+
+- pulseaudio-modules-droid
+# for audio recording to work:
+- qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
+
+# These need to be per-device due to differing backends (fbdev, eglfs, hwc, ..?)
+- qt5-qtwayland-wayland_egl
+- qt5-qpa-hwcomposer-plugin
+- qtscenegraph-adaptation
+
+# Add GStreamer v1.0 as standard
+- gstreamer1.0
+- gstreamer1.0-plugins-good
+- gstreamer1.0-plugins-base
+- gstreamer1.0-plugins-bad
+- nemo-gstreamer1.0-interfaces
+# For devices with droidmedia and gst-droid built, see HADK pdf for more information
+#- gstreamer1.0-droid
+
+# This is needed for notification LEDs
+- mce-plugin-libhybris
+
+# USB mode controller
+- usb-moded
+
+# hammerhead, grouper, and maguro use this in scripts, so include for all
+- rfkill
+
+# enable device lock and allow to select untrusted software
+- jolla-devicelock-daemon-encsfa
+
+# Enable home encryption
+#- sailfish-device-encryption
+
+# For GPS
+- geoclue-provider-hybris
+
+# For FM radio on some QCOM devices
+#- qt5-qtmultimedia-plugin-mediaservice-irisradio
+#- jolla-mediaplayer-radio
+
+# NFC for devices using Android 8 or newer as base
+#- nfcd-binder-plugin
+#- jolla-settings-system-nfc
+
+Summary: Jolla HW Adaptation i9100
+
