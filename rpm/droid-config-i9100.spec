@@ -22,9 +22,12 @@
 # We assume most devices will
 %define have_modem 1
 
+Obsoletes: ofono-configs-mer
 Provides: ofono-configs
 
 %include droid-configs-device/droid-configs.inc
+%include patterns/patterns-sailfish-device-adaptation-i9100.inc
+%include patterns/patterns-sailfish-device-configuration-i9100.inc
 
 # IMPORTANT if you want to comment out any macros in your .spec, delete the %
 # sign, otherwise they will remain defined! E.g.:
