@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #      Copyright (C) 2021 edp17
 #
@@ -13,5 +13,10 @@
 #  GNU General Public License for more details.
 #
 
-echo 1 > /sys/class/misc/notification/notification_enabled
-echo 0 > /sys/class/misc/notification/notification_timeout
+# Kill patchram
+wait 2
+/usr/bin/killall brcm_patchram_plus
+
+# Retsrat rfkill service
+wait 2
+/usr/bin/systemctl restart bluetooth-rfkill-event.service

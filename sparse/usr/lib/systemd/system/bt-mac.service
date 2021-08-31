@@ -1,0 +1,11 @@
+[Unit]
+Description=Populate BT mac address into /etc/firmware/btmac
+After=connman.service
+Before=network-pre.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/droid/populate-bt-mac.sh
+
+[Install]
+WantedBy=multi-user.target

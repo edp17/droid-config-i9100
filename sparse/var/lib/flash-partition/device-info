@@ -1,0 +1,7 @@
+CPUCHECK_STRING="Exynos 4210 I9100"
+
+PART_1="KERNEL"
+
+PART_REAL_1="mmcblk0p5"
+
+PART_I="1"

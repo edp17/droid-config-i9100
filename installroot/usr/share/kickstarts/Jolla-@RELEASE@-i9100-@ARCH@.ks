@@ -6,9 +6,6 @@
 # SuggestedImageType: fs
 # SuggestedArchitecture: armv7hl
 
-keyboard us
-user --name nemo --groups audio,input,video --password nemo
-lang en_US.UTF-8
 timezone --utc UTC
 
 ### Commands from /tmp/sandbox/usr/share/ssu/kickstart/part/default
@@ -24,7 +21,7 @@ repo --name=hotfixes-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RE
 repo --name=jolla-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RELEASE@/jolla/@ARCH@/
 
 %packages
-@Jolla Configuration i9100
+patterns-sailfish-device-configuration-i9100
 %end
 
 %attachment
@@ -36,17 +33,17 @@ repo --name=jolla-@RELEASE@ --baseurl=https://releases.jolla.com/releases/@RELEA
 
 %end
 
-%pre
+%pre --erroronfail
 export SSU_RELEASE_TYPE=release
 ### begin 01_init
 touch $INSTALL_ROOT/.bootstrap
 ### end 01_init
 %end
 
-%post
+%post --erroronfail
 export SSU_RELEASE_TYPE=release
 ### begin 01_arch-hack
-if [ "@ARCH@" == armv7hl ] || [ "@ARCH@" == armv7tnhl ]; then
+if [ "@ARCH@" == armv7hl ] || [ "@ARCH@" == armv7tnhl ] || [ "@ARCH@" == aarch64 ]; then
     # Without this line the rpm does not get the architecture right.
     echo -n "@ARCH@-meego-linux" > /etc/rpm/platform
 
@@ -76,7 +73,7 @@ UID_MIN=$(grep "^UID_MIN" /etc/login.defs |  tr -s " " | cut -d " " -f2)
 DEVICEUSER=`getent passwd $UID_MIN | sed 's/:.*//'`
 
 if [ -x /usr/bin/oneshot ]; then
-   su -c "/usr/bin/oneshot --mic"
+   /usr/bin/oneshot --mic
    su -c "/usr/bin/oneshot --mic" $DEVICEUSER
 fi
 ### end 50_oneshot
@@ -118,7 +115,7 @@ psCheckAccessDeleted = no
 ### end 90_zypper_skip_check_access_deleted
 %end
 
-%post --nochroot
+%post --nochroot --erroronfail
 export SSU_RELEASE_TYPE=release
 ### begin 50_os-release
 (
@@ -129,9 +126,31 @@ cat $INSTALL_ROOT/etc/os-release
 echo "SAILFISH_CUSTOMER=\"${CUSTOMERS//$'\n'/ }\""
 ) > $IMG_OUT_DIR/os-release
 ### end 50_os-release
+### begin 99_check_shadow
+IS_BAD=0
+
+echo "Checking that no user has password set in /etc/shadow."
+# This grep prints users that have password set, normally nothing
+if grep -vE '^[^:]+:[*!]{1,2}:' $INSTALL_ROOT/etc/shadow
+then
+    echo "A USER HAS PASSWORD SET! THE IMAGE IS NOT SAFE!"
+    IS_BAD=1
+fi
+
+# Checking that all users use shadow in passwd,
+# if they weren't the check above would be useless
+if grep -vE '^[^:]+:x:' $INSTALL_ROOT/etc/passwd
+then
+    echo "BAD PASSWORD IN /etc/passwd! THE IMAGE IS NOT SAFE!"
+    IS_BAD=1
+fi
+
+# Fail image build if checks fail
+[ $IS_BAD -eq 0 ] && echo "No passwords set, good." || exit 1
+### end 99_check_shadow
 %end
 
-%pack
+%pack --erroronfail
 export SSU_RELEASE_TYPE=release
 ### begin hybris
 pushd $IMG_OUT_DIR

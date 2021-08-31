@@ -1,1 +1,3 @@
 /usr/sbin/flash-partition
+/var/lib/platform-updates/flash-bootimg.sh
+/var/lib/flash-partition/device-info

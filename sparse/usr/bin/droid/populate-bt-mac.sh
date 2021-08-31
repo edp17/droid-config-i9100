@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 #      Copyright (C) 2021 edp17
 #
@@ -13,5 +13,5 @@
 #  GNU General Public License for more details.
 #
 
-echo 1 > /sys/class/misc/notification/notification_enabled
-echo 0 > /sys/class/misc/notification/notification_timeout
+# Populate real BT mac address
+cat /efs/bluetooth/bt_addr > /etc/firmware/btmac
