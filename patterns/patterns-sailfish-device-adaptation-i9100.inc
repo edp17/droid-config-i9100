@@ -21,13 +21,15 @@ Requires: hybris-libsensorfw-qt5
 
 # Vibra
 Requires: ngfd-plugin-native-vibrator
-Requires: qt5-feedback-haptics-native-vibrator
+#edp17#Requires: qt5-feedback-haptics-native-vibrator
 
 # Needed for /dev/touchscreen symlink
 Requires: qt5-plugin-generic-evdev
 
 Requires: pulseaudio-modules-droid
 Requires: pulseaudio-modules-droid-glue
+#edp17- for bluez4
+Requires: pulseaudio-modules-bluez4
 # for audio recording to work:
 Requires: qt5-qtmultimedia-plugin-mediaservice-gstmediacapture
 
