@@ -54,6 +54,7 @@ Requires: jolla-settings-system-flashlight
 # install some packages
 Requires: mce-tools
 Requires: connman-tools
+Requires: yamuisplash
 
 %description -n patterns-sailfish-device-configuration-i9100
 Pattern with packages for i9100 configurations
