@@ -3,10 +3,8 @@
 /etc/pulse/arm_droid_default.pa
 /etc/pulse/x-maemo-match.table
 /etc/pulse/x-maemo-sink-volume.table
-/etc/pulse/xpolicy.conf.d/bluez5_earpiece.conf
 /etc/pulse/xpolicy.conf.d/fmradio.conf.disabled
 /etc/pulse/xpolicy.conf.d/earpiece.conf
-/etc/pulse/xpolicy.conf.d/bluez5.conf
 /etc/pulse/xpolicy.conf.d/usbaudio.conf.disabled
 /etc/pulse/xpolicy.conf
 /etc/pulse/mainvolume-listening-time-notifier.conf
