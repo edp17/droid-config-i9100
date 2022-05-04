@@ -77,7 +77,7 @@ Requires: geoclue-provider-hybris-hal
 # install stuff for bluetooth
 Requires: broadcom-bluetooth
 Requires: bluetooth-rfkill-event
-Requires: bluetooth-rfkill-event-configs-mer
+#Requires: bluetooth-rfkill-event-configs-mer
 
 %description -n patterns-sailfish-device-adaptation-i9100
 Pattern with packages for i9100 HW Adaptation
