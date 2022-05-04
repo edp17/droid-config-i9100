@@ -27,7 +27,7 @@ Requires: ngfd-plugin-native-vibrator
 Requires: qt5-plugin-generic-evdev
 
 Requires: pulseaudio-modules-droid
-Requires: pulseaudio-modules-droid-glue
+#Requires: pulseaudio-modules-droid-glue
 #edp17- for bluez4
 Requires: pulseaudio-modules-bluez4
 # for audio recording to work:
