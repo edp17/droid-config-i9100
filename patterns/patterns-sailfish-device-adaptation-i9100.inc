@@ -69,9 +69,9 @@ Requires: geoclue-provider-hybris-hal
 # Telephony (RIL sockets)
 Requires: ofono-ril-plugin
 
-# For FM radio on some QCOM devices
-#Requires: qt5-qtmultimedia-plugin-mediaservice-irisradio
-#Requires: jolla-mediaplayer-radio
+# For FM radio
+Requires: qt5-qtmultimedia-plugin-mediaservice-irisradio
+Requires: jolla-mediaplayer-radio
 
 # NFC for devices using Android 8 or newer as base
 #Requires: nfcd-binder-plugin
