@@ -1,2 +1,2 @@
 #!/bin/sh
-/usr/sbin/flash-partition KERNEL /boot/boot.img
+/usr/sbin/flash-partition KERNEL /boot/kernel
